@@ -1,0 +1,735 @@
+.landingConatiner {
+  padding: 0 5%;
+  background-color: #101010;
+}
+.container1 {
+  height: calc(100vh - 70px);
+  width: 100%;
+  border-bottom: 1px solid wheat;
+}
+.container2 {
+  min-height: 80vh;
+  background-color: #101010;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.leftContainer2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftContainer2 .leftinnerContainer2 {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+.rightContainer2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5%;
+}
+.rightContainer2 .headingRight {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+.rightContainer2 .headingRight p:nth-child(2) {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 4rem;
+}
+.rightContainer2 .dataRight {
+  width: 70%;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.gradientContainer {
+  height: 400px;
+  width: 400px;
+}
+.textRevealContainer {
+  position: relative;
+  top: -100px;
+  width: 70%;
+  padding-bottom: 200px;
+}
+.textRevealContainer .para1 {
+  opacity: 0.5;
+  margin: 50px 0 20px 0;
+}
+.textRevealContainer .btnContainer button:nth-child(1) {
+  background-color: #4375fb;
+  padding: 12px 50px;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+}
+.textRevealContainer .btnContainer button:nth-child(2) {
+  background-color: #101010;
+  padding: 12px 50px;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 20px;
+}
+.textRevealContainer .btnContainer button:hover {
+  cursor: pointer;
+}
+
+.investContainer {
+  width: 80%;
+  margin: auto;
+}
+.container4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  font-family: "Switzer", sans-serif;
+}
+.container4 img {
+  opacity: 0.05;
+  position: absolute;
+  top: -50px;
+  z-index: -1;
+}
+.container4 h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5rem;
+}
+.container4 h1 span {
+  margin-right: 70px;
+}
+
+.container4 p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  width: 70%;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: -1px;
+}
+.container5 {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  font-family: "Switzer", sans-serif;
+  padding-bottom: 200px;
+}
+
+.container5 .leftContainer5 {
+  flex: 1;
+}
+.container5 .rightContainer5 {
+  flex: 1;
+  margin-top: 40px;
+}
+.container5 .cardcontainer {
+  background-color: #f9f8f6;
+  padding: 40px;
+  margin: 10px;
+  border: 1px solid #00000015;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  min-height: 600px;
+}
+
+.container5 .cardcontainer:hover {
+  background-color: #f5f3eb;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container5 .cardcontainer .aniContainer {
+  height: 200px;
+  position: relative;
+}
+.container5 .cardcontainer h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  letter-spacing: -2px;
+  margin-bottom: 50px;
+}
+.container5 .cardcontainer h1 span {
+  font-weight: bold;
+}
+.container5 .cardcontainer p {
+  color: #65604a;
+  font-size: 1.2rem;
+}
+/* amimations for .container1 */
+
+.aniContainer .aniContainer1 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.aniContainer .aniContainer1 .firstBlock {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #101010;
+  bottom: 0%;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer1 .firstBlock {
+  animation: animationContainerFirstBlock 5s;
+}
+
+@keyframes animationContainerFirstBlock {
+  0% {
+    left: 60px;
+    height: 2px;
+  }
+  10% {
+    left: 60px;
+    height: 15px;
+  }
+  20% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+.aniContainer .aniContainer1 .secondBlock {
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background-color: #101010;
+  bottom: 0%;
+  left: 20px;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer1 .secondBlock {
+  animation: animationContainer2Block 5s;
+}
+
+@keyframes animationContainer2Block {
+  0% {
+    height: 0px;
+  }
+  21% {
+    height: 0px;
+  }
+  30% {
+    height: 30px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+.aniContainer .aniContainer1 .thirdBlock {
+  position: absolute;
+  width: 15px;
+  height: 60px;
+  background-color: #101010;
+  bottom: 0%;
+  left: 42px;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer1 .thirdBlock {
+  animation: animationContainer3Block 5s;
+}
+
+@keyframes animationContainer3Block {
+  0% {
+    height: 0px;
+  }
+
+  31% {
+    height: 0px;
+  }
+  50% {
+    height: 100%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+/* second animtion container */
+.aniContainer .aniContainer2 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.aniContainer2 .firstBlock {
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  width: 100%;
+  background-color: #101010;
+  height: 4px;
+  position: absolute;
+  bottom: 10px;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer2 .firstBlock {
+  animation: animation2Container1Block 5s;
+}
+@keyframes animation2Container1Block {
+  0% {
+    height: 0px;
+    bottom: 0px;
+  }
+
+  20% {
+    height: 4px;
+    bottom: 0px;
+  }
+  51% {
+    bottom: 0px;
+  }
+  60% {
+    bottom: 10px;
+  }
+
+  100% {
+    height: 4px;
+    bottom: 10px;
+  }
+}
+
+.aniContainer2 .secondBlock {
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  width: 100%;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+  height: 7px;
+  position: absolute;
+  bottom: 17px;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer2 .secondBlock {
+  animation: animation2Container2Block 5s;
+}
+@keyframes animation2Container2Block {
+  0% {
+    height: 0px;
+    bottom: 0px;
+  }
+
+  20% {
+    height: 7px;
+    bottom: 8px;
+  }
+  41% {
+    bottom: 8px;
+  }
+  50% {
+    bottom: 17px;
+  }
+
+  100% {
+    height: 7px;
+    bottom: 17px;
+  }
+}
+.aniContainer2 .thirdBlock {
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  width: 100%;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+  height: 10px;
+  position: absolute;
+  bottom: 27px;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer2 .thirdBlock {
+  animation: animation2Container3Block 5s;
+}
+@keyframes animation2Container3Block {
+  0% {
+    height: 0px;
+    bottom: 0px;
+  }
+
+  20% {
+    height: 10px;
+    bottom: 17px;
+  }
+  30% {
+    height: 10px;
+    bottom: 17px;
+  }
+  40% {
+    bottom: 27px;
+  }
+
+  100% {
+    height: 10px;
+    bottom: 27px;
+  }
+}
+.aniContainer2 .fourthBlock {
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  width: 100%;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+  height: 15px;
+  position: absolute;
+  bottom: 38px;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer2 .fourthBlock {
+  animation: animation2Container4Block 5s;
+}
+@keyframes animation2Container4Block {
+  0% {
+    height: 0px;
+    bottom: 0px;
+  }
+
+  20% {
+    height: 15px;
+  }
+  30% {
+    bottom: 38px;
+  }
+
+  100% {
+    height: 15px;
+    bottom: 38px;
+  }
+}
+
+/* third animation  */
+
+.aniContainer .aniContainer3 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aniContainer3 .firstBlock {
+  background: linear-gradient(to left, #b6b19d, #d6d2c0);
+  width: 20px;
+  height: 30px;
+  top: 15px;
+  position: absolute;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  z-index: 1;
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer3 .firstBlock {
+  animation: animation3Container1Block 5s;
+}
+@keyframes animation3Container1Block {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+
+  50% {
+    left: 60px;
+  }
+
+  100% {
+    left: 60px;
+  }
+}
+.aniContainer3 .secondBlock {
+  width: 40px;
+  background-color: #101010;
+  height: 100%;
+  position: absolute;
+  right: 20px;
+  clip-path: polygon(35% 16%, 100% 0, 100% 100%, 35% 82%);
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer3 .secondBlock {
+  animation: animation3Container2Block 5s;
+}
+@keyframes animation3Container2Block {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 40px;
+    right: 0;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 40px;
+    right: 0;
+  }
+}
+.container5 .cardcontainer:hover .aniContainer .aniContainer3 .thirdBlock {
+  animation: animation3Container3Block 5s;
+}
+@keyframes animation3Container3Block {
+  0% {
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 40px;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to left, #b6b19d, #d6d2c0);
+    z-index: 2;
+  }
+  20% {
+    clip-path: polygon(35% 16%, 100% 0, 100% 100%, 35% 82%);
+    width: 40px;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to left, #b6b19d, #d6d2c0);
+    z-index: 2;
+  }
+  100% {
+    position: absolute;
+    clip-path: polygon(35% 16%, 100% 0, 100% 100%, 35% 82%);
+    width: 40px;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to left, #b6b19d, #d6d2c0);
+    z-index: 2;
+  }
+}
+
+/* 4th animation container */
+
+.aniContainer .aniContainer4 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.aniContainer4 .firstBlock {
+  background-color: #101010;
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  position: absolute;
+}
+.aniContainer4 .firstBlock .innerfirstBlock {
+  background-color: #101010;
+  clip-path: polygon(0 0, 49% 0, 71% 100%, 0 100%);
+
+  height: 15px;
+  width: 45px;
+  position: absolute;
+}
+.container5
+  .cardcontainer:hover
+  .aniContainer
+  .aniContainer4
+  .firstBlock
+  .innerfirstBlock {
+  animation: animation4Container1innerBlock 5s;
+}
+@keyframes animation4Container1innerBlock {
+  0% {
+    bottom: 0;
+  }
+  10% {
+    bottom: 8px;
+  }
+  100% {
+    bottom: 8px;
+  }
+}
+.aniContainer4 .secondBlock {
+  width: 100%;
+  height: 15px;
+  bottom: 20px;
+  position: absolute;
+}
+.aniContainer4 .secondBlock .innersecondBlock1 {
+  width: 25px;
+  height: 15px;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+.container5
+  .cardcontainer:hover
+  .aniContainer
+  .aniContainer4
+  .secondBlock
+  .innersecondBlock1 {
+  animation: animation4Container2innerBlock2 5s;
+}
+@keyframes animation4Container2innerBlock2 {
+  0% {
+    bottom: 0px;
+  }
+  10% {
+    bottom: 0px;
+  }
+  15% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+.aniContainer4 .secondBlock .innersecondBlock2 {
+  width: 10px;
+  height: 15px;
+  bottom: 0;
+  left: 25px;
+  position: absolute;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+.container5
+  .cardcontainer:hover
+  .aniContainer
+  .aniContainer4
+  .secondBlock
+  .innersecondBlock2 {
+  animation: animation4Container2innerBlock 5s;
+}
+@keyframes animation4Container2innerBlock {
+  0% {
+    transform: skewY(0deg);
+  }
+  10% {
+    transform: skewY(0deg);
+    bottom: 0px;
+  }
+  15% {
+    transform: skewY(30deg);
+
+    bottom: 3px;
+  }
+  100% {
+    transform: skewY(30deg);
+    bottom: 3px;
+  }
+}
+
+.aniContainer4 .secondBlock .innersecondBlock3 {
+  width: 25px;
+  height: 15px;
+  bottom: 0;
+  left: 35px;
+  position: absolute;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+
+.aniContainer4 .thirdBlock {
+  width: 100%;
+  height: 15px;
+  bottom: 20px;
+  position: absolute;
+}
+.aniContainer4 .thirdBlock .innerthirdBlock1 {
+  width: 30px;
+  height: 15px;
+  bottom: 20px;
+  position: absolute;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+.aniContainer4 .thirdBlock .innerthirdBlock2 {
+  width: 30px;
+  height: 15px;
+  bottom: 20px;
+  left: 30px;
+  position: absolute;
+  background: linear-gradient(to bottom, #b6b19d, #d6d2c0);
+}
+.container5
+  .cardcontainer:hover
+  .aniContainer
+  .aniContainer4
+  .thirdBlock
+  .innerthirdBlock1 {
+  animation: animation4Container3innerBlock3 5s;
+}
+@keyframes animation4Container3innerBlock3 {
+  0% {
+    bottom: 20px;
+  }
+  17% {
+    bottom: 20px;
+  }
+  25% {
+    bottom: 27px;
+  }
+  100% {
+    bottom: 27px;
+  }
+}
+
+/* .container6 */
+
+.container6 {
+  display: flex;
+}
+
+.container6 .leftContainer6 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.container6 .rightContainer6 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.headerContainer6{
+    width: 100%;
+    
+}
+.headerContainer6 p{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+.headerContainer6 p:nth-child(2){
+    margin-left: 70px;
+    font-style: italic;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.headerContainer6 p:nth-child(2) img{
+   height: 50px;
+   width: 100px;
+   margin-left: 100px;
+}
+
+/* tablet view  */
+@media (max-width: 1024px) {
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container2 .rightContainer2 .headingRight {
+    align-items: center;
+  }
+  .rightContainer2 .dataRight {
+    width: 100%;
+    padding: 0 20%;
+  }
+}
+
+@media (max-width: 554px) {
+}

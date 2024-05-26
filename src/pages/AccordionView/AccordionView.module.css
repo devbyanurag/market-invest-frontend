@@ -1,0 +1,257 @@
+.container6 {
+  display: flex;
+  padding-bottom: 200px;
+}
+
+.container6 .leftContainer6 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.container6 .rightContainer6 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerContainer6 {
+  width: 100%;
+}
+.headerContainer6 p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+.headerContainer6 p:nth-child(2) {
+  margin-left: 70px;
+  font-style: italic;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headerContainer6 p:nth-child(2) img {
+  height: 50px;
+  width: 100px;
+  margin-left: 100px;
+}
+
+.accordionMainContainer {
+  font-family: "Switzer", sans-serif;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-self: flex-end;
+}
+.accordionContainer {
+  padding-left: 20px;
+  display: flex;
+}
+.accordionContainerIndicatore {
+  background-color: #4375fb;
+  width: 3px;
+  height: 100px;
+  margin-right: 30px;
+}
+.accordionContainerRight {
+  flex: 1;
+}
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.5rem;
+  width: 100%;
+  border-bottom: 1px solid #12121225;
+  padding-bottom: 20px;
+}
+.accordionTitle img {
+  height: 20px;
+  width: 20px;
+}
+.accordionTitle img:hover {
+  cursor: pointer;
+}
+.accordionData {
+  color: #12121250;
+  font-size: 1.1rem;
+  width: 90%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.accordionData.expanded {
+  height: auto;
+  padding: 20px 0;
+}
+.accordionData button {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.accordionData button img {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.accordionData button:hover {
+  cursor: pointer;
+}
+
+.displayNone {
+  display: block;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+.activeBold {
+  font-weight: bold;
+}
+
+.rightContainer6 {
+  position: relative;
+}
+.rightContainer6 .imgContainer1 {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+.rightContainer6 .imgContainer1 img:nth-child(1) {
+  height: 300px;
+  width: 500px;
+  object-fit: contain;
+  animation: easeIn 1s;
+  position: absolute;
+}
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rightContainer6 .imgContainer1 img:nth-child(2) {
+  height: 180px;
+  width: 300px;
+  object-fit: contain;
+  animation: easeInScale 1s;
+  position: absolute;
+  border: 1px solid black;
+  border-image: linear-gradient(
+      to right,
+      rgb(248, 227, 227),
+      rgb(144, 144, 144)
+    )
+    1;
+  left: 300px;
+  top: -50px;
+}
+@keyframes easeInScale {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.rightContainer6 .imgContainer2 {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+.rightContainer6 .imgContainer2 img:nth-child(1) {
+  height: 300px;
+  width: 500px;
+  object-fit: contain;
+  animation: easeIn 1s;
+  position: absolute;
+}
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rightContainer6 .imgContainer2 img:nth-child(2) {
+  height: 120px;
+  width: 144px;
+  object-fit: contain;
+  animation: easeInScaledelay 1s;
+  position: absolute;
+  border: 1px solid black;
+  border-image: linear-gradient(
+      to right,
+      rgb(248, 227, 227),
+      rgb(144, 144, 144)
+    )
+    1;
+  left: 350px;
+  top: 40px;
+  z-index: 1;
+}
+@keyframes easeInScaledelay {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  50% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.rightContainer6 .imgContainer2 img:nth-child(3) {
+  height: 120px;
+  width: 140px;
+  object-fit: contain;
+  animation: easeInScale 1s;
+  position: absolute;
+  border: 1px solid black;
+  border-image: linear-gradient(
+      to right,
+      rgb(248, 227, 227),
+      rgb(144, 144, 144)
+    )
+    1;
+  left: 450px;
+  top: -40px;
+  border-radius: 5px;
+}
+@keyframes easeInScale {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}

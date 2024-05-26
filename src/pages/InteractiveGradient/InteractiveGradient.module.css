@@ -1,0 +1,85 @@
+@keyframes moveDiagonalLeft {
+    0% {
+      transform: translate(-130%, -130%);
+      opacity: 0;
+
+    }
+    10%{
+        opacity: 0;
+    }
+    30% {
+      transform: translate(-50%, -50%);
+    }
+    30%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    100% {
+      transform: translate(20%, 20%);
+      opacity: 0;
+
+    }
+  }
+  
+  @keyframes moveDiagonalRight {
+    0% {
+      transform: translate(100%, 100%);
+      opacity: 0;
+
+    }
+    10%{
+        opacity: 0;
+    }
+    30% {
+      transform: translate(-60%, -60%);
+    }
+    30%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    100% {
+      transform: translate(-130%, -130%);
+      opacity: 0;
+
+    }
+  }
+  
+  .gradientBg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gradientBg svg {
+    display: none;
+  }
+  
+  .gradientsContainer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .g1, .g2 {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+  }
+  
+  .g1 {
+    background: radial-gradient(circle at center, rgba(18, 113, 255, 0.8) 0, rgba(18, 113, 255, 0) 50%) no-repeat;
+    animation: moveDiagonalLeft 7s infinite ;
+  }
+  
+  .g2 {
+    background: radial-gradient(circle at center, rgba(221, 74, 255, 0.8) 0, rgba(221, 74, 255, 0) 50%) no-repeat;
+    animation: moveDiagonalRight 7s infinite ;
+  }
+  
