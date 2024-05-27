@@ -266,4 +266,17 @@
    display: none;
    position: relative;
   }
+  .headerContainer6 img{
+    display: none;
+  }
+  .container6 .leftContainer6 {
+    width: 100%;
+    
+  }
+  .accordionContainer {
+    padding-left: 0;
+  }
+  .accordionMainContainer{
+    width: 100%;
+  }
 }
