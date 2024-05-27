@@ -88,9 +88,9 @@ const Landing = () => {
     useEffect(() => {
       const timer = setTimeout(() => {
         setShowButton(true);
-      }, 12000); // 14 seconds
+      }, 12000);
   
-      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+      return () => clearTimeout(timer);
     }, []);
 
 

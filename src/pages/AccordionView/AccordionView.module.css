@@ -255,3 +255,15 @@
     scale: 1;
   }
 }
+
+@media (max-width: 1024px) {
+
+  .container6{
+    display: block;
+  }
+  .rightContainer6 img{
+   /* display: none; */
+   display: none;
+   position: relative;
+  }
+}
