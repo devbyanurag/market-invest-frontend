@@ -1,0 +1,84 @@
+/* Button.module.css */
+
+.button {
+  position: relative;
+  display: flex;
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 250px;
+
+  /* COMMENT TO SEE BORDERS! */
+  overflow: hidden;
+  /* ---------------------- */
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  transition: font-weight 0.5s ease-in-out; /* Smooth transition for font-weight */
+}
+.button:hover{
+  font-weight: bold;
+}
+
+.line1 {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 2px;
+  background: white;
+  transform: translateX(-50px);
+}
+
+.line2 {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 40px;
+  background: white;
+  transform: translateY(0px);
+}
+
+.line3 {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 2px;
+  background: white;
+  transform: translateX(50px);
+}
+.line4 {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 40px;
+  background: white;
+  transform: translateX(0px);
+}
+
+.button:hover .line1 {
+  transform: translateX(0px);
+}
+
+.button:hover .line2 { 
+  transform: translateY(30px);
+}
+
+.button:hover .line3 {
+  transform: translateX(0px);
+}
+
+.button:hover .line4 {
+  transform: translateY(-30px);
+}

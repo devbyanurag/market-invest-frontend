@@ -43,7 +43,6 @@ const AccordionView = () => {
 
     }, [expandedIndex])
 
-    console.log(expandedIndex)
     return (
         <section className={styles.container6}>
             <div className={styles.leftContainer6}>

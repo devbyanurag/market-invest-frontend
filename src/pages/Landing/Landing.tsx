@@ -16,6 +16,11 @@ import InteractiveGradient from '../InteractiveGradient/InteractiveGradient';
 import ScrollRevealText from '../../components/ScrollRevealText/ScrollRevealText';
 import asset1img from '../../assets/imgasset1.png'
 import AccordionView from '../AccordionView/AccordionView';
+import TransitionButton from '../../components/TransitionButton/TransitionButton';
+
+import { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import TransitionButtonNoText from '../../components/TransitionButtonNoText/TransitionButtonNoText';
 
 
 ChartJS.register(
@@ -56,8 +61,37 @@ const Landing = () => {
             },
         ],
     };
+    const textRef = useRef<HTMLDivElement>(null);
+    const text = 'Private Markets'
 
+    useEffect(() => {
+        if (!textRef.current) return;
 
+        const chars = Array.from(textRef.current.children) as HTMLSpanElement[];
+
+        gsap.set(chars, { y: '-100%' });
+
+        const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'back.out(1.7)' } });
+        tl.to({}, { delay: 1 })
+            .to(chars.slice(0, 7), { y: '0%', opacity: 1, stagger: 0.1 })
+            .to({}, { duration: 0.5, delay: 0.3 })
+            .to(chars.slice(8), { y: '0%', opacity: 1, stagger: 0.1 }, '+=0.3')
+            .to({}, { duration: 0.5, delay: 4 }) // Hold for 4 seconds
+            .add(() => {
+                gsap.timeline({ defaults: { duration: 0.5, ease: 'back.out(1.7)' } })
+                    .to(chars, { y: '-100%', opacity: 0, stagger: -0.1 });
+            });
+    }, [text]);
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowButton(true);
+      }, 12000); // 14 seconds
+  
+      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    }, []);
 
 
     return (
@@ -65,8 +99,58 @@ const Landing = () => {
             <div className={styles.landingConatiner}>
                 <Header />
                 <section className={styles.container1}>
-                    <div>
+                    <div className={styles.container1left}>
 
+                        <div className={styles.arrowContainer}>
+                            <div className={styles.arrowStraightLine}></div>
+                            <div className={styles.arrowStraightLine2}></div>
+                            <div className={styles.arrowStraightLine3}></div>
+
+                        </div>
+                        <div className={styles.circlecontainer1}>
+                            <div className={styles.wrap}>
+                                <div className={styles.circle}>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.circlecontainer2}>
+                            <div className={styles.circle2}>
+                            </div>
+                        </div>
+                        <div className={styles.circlecontainer3}>
+                            <div className={styles.circle3}>
+                            </div>
+                        </div>
+                        <div className={styles.circlecontainer4}>
+                            <div className={styles.circle4}>
+                            </div>
+                        </div>
+
+                        <div className={styles.textContainer}>
+                            <div ref={textRef} className={styles.textSpan}>
+                                {text.split('').map((char, index) => (
+                                    <span key={index} className={styles.textSpan}>
+                                        {char === ' ' ? '\u00A0' : char}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.container1left2}>
+
+                        <div className={styles.anicontainerleft2}>
+                        {showButton && <TransitionButtonNoText />}
+
+                        </div>
+
+                       
+                    </div>
+
+                    <div className={styles.container1right}>
+                        <h1>Pave your way to Alpha Gains and make the most of your investments. </h1>
+                        <p>Start your journey now.</p>
+                        <TransitionButton />
 
                     </div>
                 </section>
@@ -259,8 +343,8 @@ const Landing = () => {
                         </div>
                     </div>
                 </section>
-                <AccordionView/>
-               
+                <AccordionView />
+
             </div>
         </>
     )
